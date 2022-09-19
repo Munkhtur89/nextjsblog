@@ -1,5 +1,23 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-export default function Home() {
-  return <div className={styles.container}>Myblog</div>;
+import Alert from "react-bootstrap/Alert";
+function Home() {
+  return (
+    <>
+      {[
+        "primary",
+        "secondary",
+        "success",
+        "danger",
+        "warning",
+        "info",
+        "light",
+        "dark",
+      ].map((variant) => (
+        <Alert key={variant} variant={variant}>
+          This is a {variant} alert—check it out!
+        </Alert>
+      ))}
+    </>
+  );
 }
+
+export default Home;
